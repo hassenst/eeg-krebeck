@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url('assets/fonts/Satoshi-Variable.woff2') format('woff2'),
+    url('assets/fonts/Satoshi-Variable.woff') format('woff'),
+    url('assets/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+html {
+  font-family: 'Satoshi-Variable', serif;
+  font-size: 1.25rem;
+}
+
+/*:not(:first-child)*/
+.content p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content h2,
+.content h3 {
+  font-weight: bold;
+}
+
+@media (min-width: 1536px) {
+  p,
+  .content ol {
+    font-size: 1.25rem;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  footer::before,
+  footer::after {
+    content: '';
+    display: block;
+    background-color: rgb(12, 74, 110);
+    position: absolute;
+    top: 0;
+    height: 160px;
+    width: calc((100vw - 1536px) / 2);
+  }
+
+  footer::before {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  footer::after {
+    right: 0;
+    transform: translateX(100%);
+  }
+}
+
+.content ol {
+  list-style: decimal;
+  padding: 1.25rem;
+}
+
+a.active {
+  color: rgb(3, 105, 161);
+}
+
+footer a.active {
+  color: rgb(186, 230, 253);
+}
