@@ -5,8 +5,8 @@ Markus Hassenstein
 Matrikel-Nr. 20012669
 
 ## Projektbeschreibung
-Das Projekt ist ein Entwurf eines möglichen Relaunchs der Website unserer örtlichen Bioenenergie Genossenschaft (Krebeck-Wollbrandshausen) in der ich auch Genosse bin. Dabei wird die Genossenschaft und ihr Angebot vorgestellt. Einige Technologien (Wind, Solar) sind derzeit nicht Teil der Anlange und wurden nur zu Demonstrationszwecken und Illustrierung eingebaut.
 
+Das Projekt ist ein Entwurf eines möglichen Relaunchs der Website unserer örtlichen Bioenenergie Genossenschaft (Krebeck-Wollbrandshausen) in der ich auch Genosse bin. Dabei wird die Genossenschaft und ihr Angebot vorgestellt. Einige Technologien (Wind, Solar) sind derzeit nicht Teil der Anlange und wurden nur zu Demonstrationszwecken und Illustrierung eingebaut.
 
 ## Installation auf einem lokalen Rechner
 
@@ -17,8 +17,8 @@ Das Projekt ist ein Entwurf eines möglichen Relaunchs der Website unserer örtl
 
 ## Veröffentlichung auf einem Webserver
 
-Eine lauffähige Seite finden Sie unter https://projekt.haseundrudi.com.
-Die Datenquelle (Cockpit) ist unter 
+Eine lauffähige Seite finden Sie unter https://informatik.th-brandenburg.de/~hassenst/abschlussprojekt oder https://projekt.haseundrudi.com.
+Die Datenquelle (Cockpit) ist unter
 unter meiner Subdomain (https://thb.haseundrudi.com) gehostet und liefert über eine REST-API Daten im JSON-Format.
 
 ## Erstellte Dateien mit Kommentaren
@@ -38,4 +38,3 @@ Icons:
 - Close-Icon von https://thenounproject.com/icon/close-705110/
 
 Schriftart Satoshi - https://www.fontshare.com/fonts/satoshi
-
