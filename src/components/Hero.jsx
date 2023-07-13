@@ -1,9 +1,4 @@
-const Hero = (props) => {
-  const imgUrls = [
-    'https://thb.haseundrudi.com/assets/link/a21d1f00633337825400001b',
-    'https://thb.haseundrudi.com/assets/link/a21d1efb363866a61f00010d',
-    'https://thb.haseundrudi.com/assets/link/a21d1f04386137645b00021b',
-  ];
+const Hero = () => {
   return (
     <section className="relative">
       <img

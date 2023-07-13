@@ -1,7 +1,6 @@
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import ContentSection from '../components/ContentSection';
-import News from '../components/News';
 import Footer from '../components/Footer';
 
 const Home = () => {

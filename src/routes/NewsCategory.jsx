@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import News from '../components/News';
 
-const NewsCategory = (params) => {
+const NewsCategory = () => {
   return (
     <div className="max-w-screen-2xl m-auto">
       <Header></Header>

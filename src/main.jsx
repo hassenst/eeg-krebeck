@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import App from './App.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import Home from './routes/Home.jsx';
 import Page from './routes/Page.jsx';
 import NewsCategory from './routes/NewsCategory';
-import ErrorPage from './Error-page';
-
-//import Root, { loader as rootLoader, action as rootAction } from './routes/root';
+import ErrorPage from './ErrorPage';
 
 const router = createBrowserRouter([
   {

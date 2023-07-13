@@ -2,7 +2,7 @@ import Button from './Button';
 import CountUp from './CountUp';
 import News from './News';
 
-const ContentSection = (props) => {
+const ContentSection = () => {
   return (
     <>
       <section className=" p-5">

@@ -1,28 +1,17 @@
 import { useState, useEffect } from 'react';
-import HTMLReactParser from 'html-react-parser';
 import { Link } from 'react-router-dom';
+import timestampToDatestring from '../helper';
 const apiUrl = 'https://thb.haseundrudi.com/api/';
-
-/**
- * @param {*} timestamp
- * @returns DateString
- */
-
-const date = (timestamp) => {
-  return new Date(timestamp * 1000).toLocaleDateString();
-};
 
 const News = (params) => {
   const [data, setData] = useState(null);
   const limit = params.limit ? params.limit : 10;
 
   useEffect(() => {
-    // fetch data
     const dataFetch = async () => {
       const data = await (
         await fetch(`${apiUrl}content/items/news?limit=${limit}`)
       ).json();
-      // set state when the data received
       setData(data);
     };
 
@@ -53,7 +42,7 @@ const News = (params) => {
               <h3 className="font-bold md:text-3l">
                 <Link to={`/news/${news._id}`}>{news.title}</Link>
               </h3>
-              <p className="md:mt-3 text-sm">{date(news._created)}</p>
+              <p className="md:mt-3 text-sm">{timestampToDatestring(news._created)}</p>
             </div>
           ))}
         </div>

@@ -77,8 +77,9 @@ const Form = ({ data }) => {
             {...register('email', {
               required: 'Email ist ein Pflichtfeld',
               validate: {
+                /** Email Regex von hier: http://www.icodeguru.com/webclient/visual-quickstart-guide-javascript-and-ajax/0321430328/ch08lev1sec1.html */
                 matchPattern: (v) =>
-                  /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) ||
+                  /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,6})+$/.test(v) ||
                   'Bitte geben Sie eine gültige Emailadresse ein',
               },
             })}
@@ -99,8 +100,8 @@ const Form = ({ data }) => {
             className="block border border-black p-2 w-full"
             {...register('phone', {
               validate: {
-                matchPattern: (v) =>
-                  /^[\+]?[(]?[0-9]*[)]?[\/\-\s\.]?[0-9]*[-\s\.]?[0-9]*$/.test(v) ||
+                matchPattern: (value) =>
+                  /^[\+]?[(]?[0-9]*[)]?[\/\-\s\.]?[0-9]*[-\s\.]?[0-9]*$/.test(value) ||
                   'Bitte geben Sie gültige Telefonnummer ein',
               },
             })}

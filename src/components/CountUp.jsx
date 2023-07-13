@@ -5,8 +5,10 @@ const CountUp = (props) => {
   const [ElementIsVisible, updateElementIsVisible] = useState(false);
   const counter = useRef();
 
+  /**
+   * Der Hook und Observer sind t stark inspiriert von https://spacejelly.dev/posts/how-to-trigger-a-function-when-scrolling-to-an-element-in-react-intersection-observer/
+   */
   useEffect(() => {
-    // exit early when we reach 0
     if (number >= props.int) return;
 
     if (ElementIsVisible) {
@@ -23,6 +25,7 @@ const CountUp = (props) => {
 
     observer.observe(counter.current);
   }, [ElementIsVisible, number]);
+
   return (
     <div ref={counter}>
       <p>

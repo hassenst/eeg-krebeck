@@ -1,20 +1,13 @@
 import Header from '../components/Header';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-const apiUrl = 'https://thb.haseundrudi.com/api/';
-import HTMLReactParser from 'html-react-parser';
 import Form from '../components/Form';
 import Button from '../components/Button';
 import Footer from '../components/Footer';
+const apiUrl = 'https://thb.haseundrudi.com/api/';
+import HTMLReactParser from 'html-react-parser';
 
-/**
- * @param {*} timestamp
- * @returns DateString
- */
-
-const date = (timestamp) => {
-  return new Date(timestamp * 1000).toLocaleDateString();
-};
+import timestampToDatestring from '../helper';
 
 const Page = (props) => {
   const [data, setData] = useState(null);
@@ -40,7 +33,9 @@ const Page = (props) => {
         <main className="grow">
           <article className="mt-24 p-5 lg:flex gap-6">
             <div className="lg:w-6/12 lg:sticky top-32 lg:self-start">
-              {props.type && <p className="text-sm">{date(data._created)}</p>}
+              {props.type && (
+                <p className="text-sm">{timestampToDatestring(data._created)}</p>
+              )}
               <h1 className="font-bold text-lg md:text-xl lg:text-2xl 2xl:text-3xl text-sky-800">
                 {data.title}
               </h1>

@@ -12,8 +12,7 @@ const Header = ({ hasHeaderImage }) => {
   /**
    * Show or hide menu on  mobile
    */
-
-  const toogle = () => {
+  const toggle = () => {
     if (show == '') {
       setShow('hidden');
       setNavigation('');
@@ -25,9 +24,10 @@ const Header = ({ hasHeaderImage }) => {
 
   useEffect(() => {
     const onScroll = () => setOffset(window.scrollY);
-    // clean up code
+
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
+
     if (offset < 100 && hasHeaderImage) {
       setFade('');
       setColor('lg:text-white');
@@ -37,6 +37,7 @@ const Header = ({ hasHeaderImage }) => {
       setColor('lg:text-black');
       setFill('#000000');
     }
+
     return () => window.removeEventListener('scroll', onScroll);
   }, [offset]);
 
@@ -64,7 +65,7 @@ const Header = ({ hasHeaderImage }) => {
           </NavLink>
         </div>
         <nav>
-          <button className="lg:hidden w-6" onClick={toogle}>
+          <button className="lg:hidden w-6" onClick={toggle}>
             <svg
               width="100%"
               height="100%"
@@ -82,7 +83,7 @@ const Header = ({ hasHeaderImage }) => {
               </g>
             </svg>
           </button>
-          <button className={`fixed top-5 right-5 z-50 ${show} w-12`} onClick={toogle}>
+          <button className={`fixed top-5 right-5 z-50 ${show} w-12`} onClick={toggle}>
             <svg
               version="1.1"
               x="0px"
@@ -157,7 +158,7 @@ const Header = ({ hasHeaderImage }) => {
             </li>
             <li>
               <NavLink
-                className="block p-4 hover:text-sky-700 transition-colors duration-300 ease-in-out"
+                className="block p-4 hover:text-amber-600 transition-colors duration-300 ease-in-out"
                 to={`/genosse-werden`}
               >
                 Genosse werden

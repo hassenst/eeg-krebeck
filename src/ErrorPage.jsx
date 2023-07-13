@@ -1,10 +1,7 @@
-import { useRouteError } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
 export default function ErrorPage() {
-  const error = useRouteError();
-
   return (
     <div className="max-w-screen-2xl flex flex-col m-auto h-full rotate-180">
       <Header />
